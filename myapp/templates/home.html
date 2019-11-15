@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{% block title %}{% endblock %}</title>
+</head>
+<body>
+        {% block body %}
+        <div class="container">
+          <div class=" form-group row justify-content-center">
+          <div class="select-box">
+            <select>
+                {% for values in category_list %}
+<option value=""><a href="#">{{values.category}}</a></option>
+                {% endfor %}
+            </select>
+
+          </div>
+        </div>
+      </div>
+
+        {% endblock %}
+
+    
+</body>
+</html>
